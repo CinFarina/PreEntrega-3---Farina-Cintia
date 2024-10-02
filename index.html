@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito de Restaurante</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        .producto {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 15px;
+            margin: 10px 0;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .producto h2 {
+            margin-top: 0;
+            color: #007BFF; 
+        }
+
+        .producto p {
+            font-size: 18px;
+            color: #555;
+        }
+
+        .agregar-carrito {
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 15px;
+            cursor: pointer;
+        }
+
+        .agregar-carrito:hover {
+            background-color: #218838;
+        }
+
+        h2 {
+            margin-top: 30px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        #carrito {
+            background-color: #fff; 
+            border-radius: 5px; 
+            padding: 10px; 
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        button {
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 15px;
+            cursor: pointer;
+            margin-right: 10px;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        #mensaje {
+          margin-top: 20px; 
+          font-weight:bold; 
+          color:#d9534f;
+      }
+    </style>
+</head>
+<body>
+    <h1>Menú del Restaurante</h1>
+
+    <div class="producto">
+        <h2>Pizza</h2>
+        <p>Precio: $10.00</p>
+        <button class="agregar-carrito" data-producto="Pizza" data-precio="10">Agregar al Carrito</button>
+    </div>
+
+    <div class="producto">
+        <h2>Hamburguesa</h2>
+        <p>Precio: $8.00</p>
+        <button class="agregar-carrito" data-producto="Hamburguesa" data-precio="8">Agregar al Carrito</button>
+    </div>
+
+    <div class="producto">
+        <h2>Ensalada</h2>
+        <p>Precio: $6.00</p>
+        <button class="agregar-carrito" data-producto="Ensalada" data-precio="6">Agregar al Carrito</button>
+    </div>
+
+    <div class="producto">
+        <h2>Pasta</h2>
+        <p>Precio: $12.00</p>
+        <button class="agregar-carrito" data-producto="Pasta" data-precio="12">Agregar al Carrito</button>
+    </div>
+
+    <h2>Carrito de Compras</h2>
+    <ul id="carrito"></ul>
+    <p>Total: $<span id="total">0.00</span></p>
+
+    <div id="mensaje"></div>
+
+    <button id="finalizar-compra">Finalizar Compra</button>
+    <button id="cancelar-compra">Cancelar Compra</button>
+    <button id="deshacer-movimiento">Deshacer Último Movimiento</button>
+
+    <script src="main.js"></script>
+</body>
+</html>
